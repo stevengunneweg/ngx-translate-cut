@@ -1,5 +1,5 @@
 {
-  "name": "ngx-translate-cut",
+  "name": "@gunnaway/ngx-translate-cut",
   "version": "18.0.0",
   "description": "Angular pipe for cutting translations (plugin for ngx-translate)",
   "author": "Lukas Bartak <bart@bartweb.cz> (https://github.com/bartholomej)",
@@ -9,17 +9,17 @@
     "start": "ng build ngx-translate-cut --watch",
     "build": "ng build ngx-translate-cut --configuration production",
     "build:demo": "ng build demo --configuration production",
-    "deploy:ghpages": "yarn build && yarn build:demo && ngh --dir=dist/demo",
+    "deploy:ghpages": "npm run build && npm run build:demo && ngh --dir=dist/demo",
     "publish:npmjs": "npm run syncprojects && npm run build && npm publish --folder dist/ngx-translate-cut",
-    "publish:next": "yarn && yarn syncprojects && yarn build && yarn test --configuration=ci && npm publish --folder dist/ngx-translate-cut --tag next",
-    "gpr:setup": "yarn ts-node --project scripts/tsconfig.ts-node.json scripts/gpr-setup",
+    "publish:next": "npm run && npm run syncprojects && npm run build && npm run test --configuration=ci && npm publish --folder dist/ngx-translate-cut --tag next",
+    "gpr:setup": "npm run ts-node --project scripts/tsconfig.ts-node.json scripts/gpr-setup",
     "test": "ng test",
-    "coverage": "yarn test --code-coverage",
+    "coverage": "npm run test --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "translations:extract": "ngx-translate-extract --input ./projects/demo/src --output ./projects/demo/src/assets/i18n/en.json --clean --sort --format namespaced-json --marker _ --format-indentation '  '",
     "create:version": "ts-node --project scripts/tsconfig.ts-node.json scripts/create-version",
-    "postinstall": "yarn create:version",
+    "postinstall": "npm run create:version",
     "syncprojects": "ts-node --project scripts/tsconfig.ts-node.json scripts/sync-projects",
     "version": "npm run syncprojects && git add ./projects/ngx-translate-cut/",
     "postversion": "git push && git push --follow-tags",
@@ -80,18 +80,18 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~5.4.5"
   },
-  "homepage": "https://github.com/bartholomej/ngx-translate-cut",
+  "homepage": "https://github.com/gunnaway/ngx-translate-cut",
   "license": "MIT",
   "repository": {
-    "url": "git+https://github.com/bartholomej/ngx-translate-cut.git",
+    "url": "git+https://github.com/gunnaway/ngx-translate-cut.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/bartholomej/ngx-translate-cut/issues"
+    "url": "https://github.com/gunnaway/ngx-translate-cut/issues"
   },
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/bartholomej"
+    "url": "https://github.com/sponsors/gunnaway"
   },
   "keywords": [
     "angular",
